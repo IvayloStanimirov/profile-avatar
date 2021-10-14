@@ -8,11 +8,30 @@
       content="Used as a boilerplate for tasks in the 'HTML, CSS and SASS' course in boom.dev"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .active {
+        transform: scale(2);
+      }
+      .profile {
+        width: 200px !important;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
+    <div class="image">
+      <img src="https://cdn.vox-cdn.com/thumbor/JgCPp2BBxETY596wCp50ccosCfE=/0x0:2370x1574/1200x800/filters:focal(996x598:1374x976)/cdn.vox-cdn.com/uploads/chorus_image/image/68870438/Screen_Shot_2020_07_21_at_9.38.25_AM.0.png" class="profile" alt="" 
+      >
+    </div>
     <div class="main">
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
     </div>
   </body>
+  <script>
+    document.querySelector('.profile').addEventListener('click', (e) => {
+      console.log(e.target)
+      e.target.classList.add('active');
+    })
+  </script>
 </html>
